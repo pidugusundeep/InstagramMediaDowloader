@@ -1,21 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+
 
 import React, { Component } from 'react';
-import { Button } from 'react-native-elements';
-import { Platform, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Button, Image } from 'react-native-elements';
+import { Platform, StyleSheet, Text, View, TextInput, ActivityIndicator } from 'react-native';
 
-// const instructions = Platform.select({
-//   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-//   android:
-//     'Double tap R on your keyboard to reload,\n' +
-//     'Shake or press menu button for dev menu',
-// });
+
+import MediaContainer from "./components/MediaContainer"
+import Header from "./components/Header"
+
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -33,24 +25,21 @@ export default class App extends Component<Props> {
                 name: "search",
                 size: 30,
                 color: "white",
-               
               }}
-              title=""
-              // onPress={onPressLearnMore}
             />
           </View>
         </View>
-
-        {/* <Text style={styles.instructions}>To get started, edit App.js</Text> */}
-        {/* <Text style={styles.instructions}>{instructions}</Text> */}
+        <MediaContainer></MediaContainer>
       </View>
+
     );
   }
 }
 
 const styles = StyleSheet.create({
+  
   submitUrlButton: {
-    flex:1.5,
+    flex: 1.5,
     marginTop: 10,
     marginLeft: -5,
     marginRight: 5,
@@ -66,7 +55,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    color:'white',
+    color: 'white',
     fontSize: 35,
     textAlign: 'center',
     backgroundColor: '#346ac1',
