@@ -28,15 +28,12 @@ export default class downloadFIle extends Component {
     RNFetchBlob.config({
       // add this option that makes response data to be stored as a file,
       // this is much more performant.
-      path: dirs.DownloadDir + "/path-to-file.mp4",
+      path: dirs.DownloadDir +"/"+ this.props.parsedImageName,
       fileCache: true
     })
       .fetch(
         "GET",
-        "https://instagram.fmaa6-1.fna.fbcdn.net/vp/8a6bd9081419220deb7c340809462f5c/5C90EA78/t50.2886-16/46201645_259037214964710_1755229709400014848_n.mp4?_nc_ht=instagram.fmaa6-1.fna.fbcdn.net",
-        {
-          //some headers ..
-        }
+        this.props.parsedImageUrl
       )
       .progress((received, total) => {
         console.log("progress", received / total);
@@ -79,8 +76,8 @@ export default class downloadFIle extends Component {
   render() {
     return (
       <View>
-        <Text> Download Files in Android </Text>
-        <Button onPress={() => this.downloadFile()} title="Download" />
+        {/* <Text> Download Files in Android </Text> */}
+        <Button style={{backgroundColor:'black'}} onPress={() => this.downloadFile()} title="Download" />
         {this.state.loading ? (
           <ProgressBarAndroid
             styleAttr="Large"
