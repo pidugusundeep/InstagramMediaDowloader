@@ -7,6 +7,7 @@ import { Platform, StyleSheet, Text, View, TextInput, ActivityIndicator } from '
 
 import MediaContainer from "./components/MediaContainer"
 import Header from "./components/Header"
+import DownloadFIle from "./components/downloadFIle"
 
 
 type Props = {};
@@ -30,6 +31,7 @@ export default class App extends Component<Props> {
           </View>
         </View>
         <MediaContainer></MediaContainer>
+        <DownloadFIle></DownloadFIle>
       </View>
 
     );
