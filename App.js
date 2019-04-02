@@ -82,7 +82,7 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
 
-  submitUrlButton: {
+  submitUrlButton: { 
     flex: 1.5,
     marginTop: 10,
     marginLeft: -5,
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   welcome: {
     color: 'white',
-    fontSize: 35,
+    fontSize: 40,
     textAlign: 'center',
     backgroundColor: '#346ac1',
     padding: 10,
